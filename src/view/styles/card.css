@@ -1,0 +1,84 @@
+/* Elevation, radius and icon button follow the host's menu material and ghost controls.
+   Host variables outside the published alias tokens carry fallbacks so a rename only degrades looks. */
+.dsh-snake-card {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 4px 8px 8px;
+  pointer-events: auto;
+  user-select: none;
+  touch-action: none;
+  outline: none;
+  border: 0;
+  border-radius: var(--dsw-radius-lg, 12px);
+  --dsw-elevation-stroke-color: var(--dsw-alias-border-l1);
+  background: color-mix(in srgb, var(--dsw-alias-bg-layer-1) 40%, transparent);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: var(--dsw-elevation-prominent, 0 0 0 .5px var(--dsw-alias-border-l1), 0 3px 8px rgba(0, 0, 0, .04), 0 0 20px rgba(0, 0, 0, .05));
+  color: var(--dsw-alias-label-primary);
+}
+
+.dsh-snake-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 28px;
+  padding-left: 4px;
+  cursor: grab;
+  font-size: 12px;
+  color: var(--dsw-alias-label-secondary);
+  font-variant-numeric: tabular-nums;
+}
+.dsh-snake-card:active .dsh-snake-header { cursor: grabbing; }
+.dsh-snake-header b { font-weight: 500; color: var(--dsw-alias-label-primary); margin-left: 4px; }
+.dsh-snake-bonus, .dsh-snake-header .dsh-snake-bonus b { color: var(--dsw-alias-state-warn-primary); }
+
+.dsh-snake-close {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin-left: auto;
+  margin-right: -4px;
+  padding: 6px;
+  border: 0;
+  border-radius: var(--dsw-radius-sm, 6px);
+  background: transparent;
+  color: var(--dsw-alias-label-secondary);
+  line-height: 1;
+  cursor: pointer;
+}
+@media (hover: hover) {
+  .dsh-snake-close:hover { background: var(--dsw-alias-interactive-bg-hover, var(--dsw-alias-bg-layer-2)); }
+}
+
+.dsh-snake-board {
+  position: relative;
+  overflow: hidden;
+  line-height: 0;
+  border-radius: var(--dsw-radius-sm, 6px);
+  border: 1px solid var(--dsw-alias-border-l4, var(--dsw-alias-border-l2));
+  background: color-mix(in srgb, var(--dsw-alias-bg-base) 20%, transparent);
+}
+.dsh-snake-board canvas { display: block; }
+
+.dsh-snake-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  pointer-events: none;
+  line-height: 18px;
+  font-size: 12px;
+  text-align: center;
+  background: color-mix(in srgb, var(--dsw-alias-bg-base) 35%, transparent);
+  color: var(--dsw-alias-label-secondary);
+}
+.dsh-snake-overlay strong { font-weight: 500; font-size: 13px; color: var(--dsw-alias-label-primary); }

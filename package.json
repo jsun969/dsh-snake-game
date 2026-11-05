@@ -1,0 +1,14 @@
+{
+  "name": "dsh-snake-workspace",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "watch": "node scripts/build.mjs --watch",
+    "test": "node --test 'test/*.test.js'",
+    "check": "pnpm run build && node --check dsh-snake/client.js && pnpm test"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Snake",
+    "description": "Play Snake in a floating window while the agent works. The game pauses when the agent finishes or needs you."
+  }
+}
