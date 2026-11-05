@@ -5,6 +5,10 @@ The game pauses when the agent finishes or needs you.
 
 ## Install
 
+Install `@jsun969/dsh-snake` with Plugin Manager (`install_bundle`) and refresh the page.
+
+## Install from source
+
 Requires Node.js and pnpm.
 
 ```sh
@@ -15,7 +19,7 @@ pnpm build
 Then install the `dsh-snake/` directory with Plugin Manager (`install_bundle` with its absolute path) and refresh the page.
 The install is a link, so keep the directory where it is.
 
-## Update
+## Update a source install
 
 ```sh
 git pull

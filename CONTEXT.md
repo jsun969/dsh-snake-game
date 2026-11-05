@@ -35,9 +35,12 @@ pnpm build     # write dsh-snake/client.js
 pnpm watch     # rebuild on change
 pnpm test      # unit tests + built-bundle smoke test; needs a prior build
 pnpm check     # build, syntax-check the bundle, test
+just publish   # pnpm check, then publish dsh-snake/ to npm as @jsun969/dsh-snake
 ```
 
-To try a build in a running DSH, follow "Update" in `README.md`.
+To try a build in a running DSH, follow "Update a source install" in `README.md`.
+
+`pnpm publish` refuses to run unless the tree is clean and `main` matches `origin/main`. Bump `version` in `dsh-snake/package.json` before each release.
 
 ## Build
 

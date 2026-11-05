@@ -1,7 +1,13 @@
 {
-  "name": "@local/dsh-snake",
+  "name": "@jsun969/dsh-snake",
   "version": "1.5.0",
-  "private": true,
+  "description": "Snake game plugin for DeepSeek Harness",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsun969/dsh-snake-game.git",
+    "directory": "dsh-snake"
+  },
+  "publishConfig": { "access": "public" },
   "type": "module",
   "exports": {
     ".": "./index.js",
