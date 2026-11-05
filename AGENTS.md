@@ -17,4 +17,4 @@ Example: `🐛 Fix bonus fruit spawning on the snake`
 - Start the subject with a capital letter, use the imperative mood, and omit the trailing period.
 - Keep the subject to 72 characters or fewer. Add a body only to explain why.
 - Make one logical change per commit.
-- Run `pnpm check` before committing, and do not commit if it fails.
+- Run `just check` before committing, and do not commit if it fails.

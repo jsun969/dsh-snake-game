@@ -1,4 +1,4 @@
-// Loads the built dsh-snake/client.js the way DSH does and checks its registrations. Run `pnpm build` first.
+// Loads the built dsh-snake/client.js the way DSH does and checks its registrations. `just test` builds it first; `pnpm test` alone does not.
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { test } from 'node:test';

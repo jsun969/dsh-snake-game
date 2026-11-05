@@ -9,11 +9,10 @@ Install `@jsun969/dsh-snake` with Plugin Manager (`install_bundle`) and refresh 
 
 ## Install from source
 
-Requires Node.js and pnpm.
+Requires Node.js, pnpm and [just](https://just.systems).
 
 ```sh
-pnpm install
-pnpm build
+just build
 ```
 
 Then install the `dsh-snake/` directory with Plugin Manager (`install_bundle` with its absolute path) and refresh the page.
@@ -23,8 +22,7 @@ The install is a link, so keep the directory where it is.
 
 ```sh
 git pull
-pnpm install
-pnpm build
+just build
 ```
 
 Then remove and reinstall the bundle, and refresh the page.
